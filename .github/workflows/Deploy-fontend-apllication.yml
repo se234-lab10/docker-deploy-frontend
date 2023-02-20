@@ -39,4 +39,3 @@ jobs:
               docker-compose -H ${{ secrets.HOSE_SERVER }} down
               docker-compose -H ${{ secrets.HOSE_SERVER }} pull
               docker-compose -H ${{ secrets.HOSE_SERVER }} up -d
-      
