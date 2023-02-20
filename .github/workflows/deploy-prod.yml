@@ -2,7 +2,7 @@ name: Deploy frontend application
 'on':
   push:
     branches:
-      - main
+      - prod
 
 jobs:
   docker:
@@ -38,5 +38,5 @@ jobs:
               cp docker-compose-prod.yml 234-deploylab-frontend/docker-compose-prod.yml
               cd 234-deploylab-frontend
               docker-compose -H ${{ secrets.HOST_SERVER }} down
-              docker-compose -H ${{ secrets.HOST_SERVER }} -f docker-compose-prod pull
-              docker-compose -H ${{ secrets.HOST_SERVER }} -f docker-compose-prod up -d
+              docker-compose -H ${{ secrets.HOST_SERVER }} -f docker-compose-prod.yml pull
+              docker-compose -H ${{ secrets.HOST_SERVER }} -f docker-compose-prod.yml up -d
