@@ -40,9 +40,3 @@ jobs:
               docker-compose -H ${{ secrets.HOSE_SERVER }} pull
               docker-compose -H ${{ secrets.HOSE_SERVER }} up -d
       
-      version: '3.3'
-      services:
-        fontend:
-          image: deityzs/234-deploylab-fontend:latest
-          ports:
-            - "8086:80"
