@@ -1,7 +1,7 @@
 name: Deploy fontend application
-  'on':
-    push:
-      branches:
+on:
+  push:
+    branches:
         -main
 jobs:
   docker:
