@@ -1,6 +1,6 @@
 version: '3.3'
 services:
   fontend:
-    image: deityzs/234-deploylab-frontend:latest
+    image: deityzs/234-deploylab-frontend-prod:latest
     ports:
       - "9999:80"
